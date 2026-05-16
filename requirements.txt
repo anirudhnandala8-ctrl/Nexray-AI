@@ -1,0 +1,7 @@
+flask
+tensorflow-cpu
+numpy
+google-genai
+python-dotenv
+markdown
+gunicorn

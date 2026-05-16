@@ -1,6 +1,0 @@
-flask
-tensorflow-cpu
-opencv-python-headless
-numpy
-google-genai
-gunicorn

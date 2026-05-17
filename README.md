@@ -1,42 +1,74 @@
-# Nexray-AI
-NexRay AI – AI-Powered Chest X-ray Diagnosis and Multilingual Medical Report Generation System
+# NEXRAY AI — Intelligent Pneumonia Detection
 
-🔗 Live Demo:(https://huggingface.co/spaces/Anirudh-22/Nexray-AI)
+> A state-of-the-art medical imaging application combining deep learning and generative AI to detect Pneumonia from Chest X-rays with high precision and automated multilingual reporting.
 
-# Overview
+🔗LIVE DEMO:(https://huggingface.co/spaces/Anirudh-22/Nexray-AI)
+---
 
-NEXRAY AI provides a complete end-to-end diagnostic pipeline. It doesn't just predict — it validates. Using a custom CNN for diagnosis and Gemini 2.0 Flash as an AI gatekeeper, the app ensures only medical-grade scans are analyzed.
+## Overview
 
-# Core Workflow
+NEXRAY AI provides a complete end-to-end diagnostic pipeline. It doesn't just predict — it **validates**. Using a custom CNN for diagnosis, the app ensures only medical-grade scans are analyzed.
+
+### Core Workflow
+
+```
 Upload X-ray → CNN Analysis → Multilingual Report
+```
 
 
-Deep Learning Analysis — Processes verified scans through a TensorFlow CNN to classify Normal vs Pneumonia
-Multilingual Reporting — Generates instant medical summaries in English, Hindi, and Telugu
+1. **Deep Learning Analysis** — Processes verified scans through a TensorFlow CNN to classify Normal vs Pneumonia
+2. **Multilingual Reporting** — Generates instant medical summaries in **English, Hindi, and Telugu**
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | Python, Flask, Gunicorn |
+| Deep Learning | TensorFlow, Keras (CNN) |
+| Generative AI | Google Gemini 2.0 Flash |
+| Image Processing | Pillow (PIL), NumPy |
+| Deployment | Hugging Face Spaces |
+
+---
+
+## 📊 System Architecture
+
+| Component | Technology | Role |
+|---|---|---|
+| Primary Model | CNN (`xray_model.h5`) | Classification — Normal vs Pneumonia |
+| Report Engine | Gemini NLP | Multilingual summary generation |
+| Input Resolution | 224 × 224 px | Standardized CNN input |
 
 
-# Tech Stack
+## 💻 Local Installation
 
-LayerTechnologyBackendPython, Flask, GunicornDeep LearningTensorFlow, Keras (CNN)Generative AIGoogle Gemini 2.0 FlashImage ProcessingPillow (PIL), NumPyDeploymentHugging Face Spaces
-
-# System Architecture
-
-ComponentTechnologyRolePrimary ModelCNN (xray_model.h5)Classification — Normal vs PneumoniaValidation AIGemini 2.0 FlashImage guardrail & safety checkReport EngineGemini NLPMultilingual summary generationInput Resolution224 × 224 pxStandardized CNN input
-
-# Local Installation
-
-1. Clone the repository
-bashgit clone https://github.com/Anirudh-22/Nexray-AI.git
+### 1. Clone the repository
+```bash
+git clone https://github.com/Anirudh-22/Nexray-AI.git
 cd Nexray-AI
-2. Install dependencies
-bashpip install -r requirements.txt
-3. Set up environment variables
-Create a .env file in the root directory:
-envGEMINI_API_KEY=your_api_key_here
-4. Run the app
-bashpython app.py
-Visit http://localhost:7860 in your browser.
+```
 
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Set up environment variables
+Create a `.env` file in the root directory:
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+### 4. Run the app
+```bash
+python app.py
+```
+
+Visit `http://localhost:7860` in your browser.
+
+---
 👤 Author
 ** NANDALA ANIRUDH **
    github:https://github.com/anirudhnandala8-ctrl/
